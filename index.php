@@ -24,7 +24,7 @@
    if(params('partner')==$friend['name'])
     {
       $partner=$friend;
-     // getCheckin($partner);
+      getCheckin($partner);
      }
    else 
     {
@@ -35,11 +35,11 @@ $location=params('place');
 getSuggestions($location);
 }
 
-/* function getCheckin($partner)
+ function getCheckin($partner)
 {
-   $checkins=$facebook->api('/'+.partner['id'].'/checkins/'.'GET');
+   $checkins=$facebook->api('/'+.$partner['id'].'/checkins/','GET');
    $checkins_a=json_decode($checkins,true);
- }*/
+ }
 
  function getSuggestions($location)
 {
