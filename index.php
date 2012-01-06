@@ -37,7 +37,7 @@ getSuggestions($location);
 
 /* function getCheckin($partner)
 {
-   $checkins=$facebook->api('/'+$partner['id']+'/checkins/'.'GET');
+   $checkins=$facebook->api('/'+.partner['id'].'/checkins/'.'GET');
    $checkins_a=json_decode($checkins,true);
  }*/
 
