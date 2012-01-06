@@ -1,0 +1,1 @@
+Date suggests you cool places where you can consider going on a date for depending on your partner and the location you are in. This is the main project,written predominantly in PHP(I needed something to push me into doing some PHP,Sorry Ruby for cheating on you,I will definetly get back) I am hacking this along with my classmates as a part of Kurukshetra Apps competetion.  
