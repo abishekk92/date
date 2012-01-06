@@ -9,7 +9,7 @@
 
  function home()
 {
- $facebook=new Facebook(array("appid"=>"","appsecret"=>""));
+ $facebook=new Facebook(array("appid"=>"186690998096099","appsecret"=>"cede4c05fa1b3adc1aaddb8a6005d0b2"));
   
 
   $user=$facebook->getUser();
@@ -24,7 +24,7 @@
    if(params('partner')==$friend['name'])
     {
       $partner=$friend;
-      getCheckin($partner);
+     // getCheckin($partner);
      }
    else 
     {
@@ -35,11 +35,11 @@ $location=params('place');
 getSuggestions($location);
 }
 
- function getCheckin($partner)
+/* function getCheckin($partner)
 {
    $checkins=$facebook->api('/'+$partner['id']+'/checkins/'.'GET');
    $checkins_a=json_decode($checkins,true);
- }
+ }*/
 
  function getSuggestions($location)
 {
@@ -47,12 +47,12 @@ getSuggestions($location);
    $client_secret="T4DREJ31ZABXTOXOQWESYFEDSKQ3COOENUAPB0V2TS3OLWMA";
    $four=new FoursquareAPI($client_key,$client_secret);
    list($lat,$long)=$four->GeoLocate($location);
-   $coords=array("ll"=>"$lat,$lang");
+   $coords=array("ll"=>"$lat,$long");
    $response=$four->GetPublic("/venues/search",$coords);
    $venues=json_decode($reponse);
    foreach($venues->response->venues as $venue)
 {
-   if($venues->categories->name==("Restuarants"||"Dinner Places"||"Shopping Mall"||"Bowling Alley"||"Theatres"||"Multiplex"||"Coffee-House"));
+   if($venue->categories->name==("Restuarants"||"Dinner Places"||"Shopping Mall"||"Bowling Alley"||"Theatres"||"Multiplex"||"Coffee-House"));
    {
      $place->name=$venue->name;
      $place->id=$venue->id;
