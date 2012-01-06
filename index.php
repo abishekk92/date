@@ -24,7 +24,7 @@
    if(params('partner')==$friend['name'])
     {
       $partner=$friend;
-      //getCheckin($partner);
+      getCheckin($partner);
      }
    else 
     {
