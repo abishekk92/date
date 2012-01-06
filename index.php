@@ -49,7 +49,7 @@ getSuggestions($location);
    list($lat,$long)=$four->GeoLocate($location);
    $coords=array("ll"=>"$lat,$long");
    $response=$four->GetPublic("/venues/search",$coords);
-   $venues=json_decode($reponse);
+   $venues=json_decode($response);
    foreach($venues->response->venues as $venue)
 {
    if($venue->categories->name==("Restuarants"||"Dinner Places"||"Shopping Mall"||"Bowling Alley"||"Theatres"||"Multiplex"||"Coffee-House"));
